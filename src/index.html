@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </head>
+  <body class="font-roboto">
+    <div id="container">
+      <nav class="bg-[#B5C0D0] border-gray-200">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >FJB</span
+            >
+          </a>
+          <div class="flex md:order-2">
+            <button
+              type="button"
+              data-collapse-toggle="navbar-search"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+              class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1"
+            >
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+            <div class="relative hidden md:block">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Search icon</span>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search..."
+              />
+            </div>
+            <button
+              data-collapse-toggle="navbar-search"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 md:hidden">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search..."
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="m-5">
+        <div>
+          <div class="flex justify-between items-center">
+            <h1 class="text-center text-2xl font-bold">
+              Forum Jual Beli Bojongsoang
+            </h1>
+            <button
+              data-modal-target="default-modal"
+              data-modal-toggle="default-modal"
+              class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              type="button"
+            >
+              add product
+            </button>
+          </div>
+          <div id="product-container" class="m-5 grid grid-cols-4 gap-4">
+            <script id="product-template" type="text/template">
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                      <img
+                        class="rounded-t-lg h-44 w-full object-contain"
+                        src="{{thumbnail}}"
+                        alt="{{thumbnail}}"
+                      />
+                  </a>
+                  <div class="p-5">
+                      <a href="#">
+                          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                          {{title}}
+                          </h5>
+                      </a>
+                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                        {{description}}
+                      </p>
+                      <div class="flex justify-between items-center">
+                          <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                  Read more
+                                  <svg
+                                  class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 14 10"
+                                  >
+                                  <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                                  />
+                              </svg>
+                          </a>
+                          <div>
+                              ${{price}}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main modal -->
+      <div
+        id="default-modal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+      >
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div
+              class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+            >
+              <h3
+                class="text-xl font-semibold text-gray-900 dark:text-white text-center"
+              >
+                Add Product
+              </h3>
+              <button
+                type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-hide="default-modal"
+              >
+                <svg
+                  class="w-3 h-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                  />
+                </svg>
+                <span class="sr-only">Close modal</span>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4">
+              <form id="postForm">
+                <div class="mb-6">
+                  <label
+                    for="default-input"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Title</label
+                  >
+                  <input
+                    type="text"
+                    id="default-input"
+                    id="title"
+                    name="title"
+                    required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Description</label
+                  >
+                  <textarea
+                    rows="4"
+                    required
+                    id="description"
+                    name="description"
+                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Write your thoughts here..."
+                  ></textarea>
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="default-input"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Price</label
+                  >
+                  <input
+                    type="number"
+                    id="price"
+                    name="price"
+                    required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="default-input"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Discount Percentage</label
+                  >
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    id="discountPercentage"
+                    name="discountPercentage"
+                    required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="default-input"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Rating</label
+                  >
+                  <input
+                    type="number"
+                    id="rating"
+                    name="rating"
+                    required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="default-input"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Stock</label
+                  >
+                  <input
+                    type="number"
+                    id="stock"
+                    name="stock"
+                    required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="brand"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Brand</label
+                  >
+                  <input
+                    type="text"
+                    id="brand"
+                    name="brand"
+                    required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="category"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Category</label
+                  >
+                  <input
+                    type="text"
+                    id="category"
+                    name="category"
+                    required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
+                <div
+                  class="flex items-center justify-end p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
+                >
+                  <button
+                    type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Add Product
+                  </button>
+                  <button
+                    data-modal-hide="default-modal"
+                    type="button"
+                    class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    Discard
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- Modal footer -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      fetch("https://dummyjson.com/products")
+        .then((res) => res.json())
+        .then((data) => {
+          const productContainer = document.getElementById("product-container");
+          const productTemplate =
+            document.getElementById("product-template").innerHTML;
+          // Loop through each product and fill the template with product data
+          data.products.forEach((product) => {
+            const productCard = productTemplate
+              .replace("{{title}}", product.title)
+              .replace("{{description}}", product.description)
+              .replace("{{price}}", product.price)
+              .replace("{{thumbnail}}", product.thumbnail);
+
+            // Append the filled template to the product container
+            productContainer.innerHTML += productCard;
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+
+      document
+        .getElementById("postForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var formData = new FormData(this);
+          fetch("https://dummyjson.com/products/add", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(Object.fromEntries(formData)),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              var container = document.getElementById("product-container");
+
+              var newItem = document.createElement("div");
+              newItem.classList.add(
+                "max-w-sm",
+                "bg-white",
+                "border",
+                "border-gray-200",
+                "rounded-lg",
+                "shadow",
+                "dark:bg-gray-800",
+                "dark:border-gray-700"
+              );
+
+              newItem.innerHTML = `
+            <a href="#">
+                <img
+                    class="rounded-t-lg h-44 w-full object-contain"
+                    src="./assets/newproduct.jpg"
+                    alt="new product"
+                />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        ${data.title}
+                    </h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    ${data.description}
+                </p>
+                <div class="flex justify-between items-center">
+                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg
+                            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 10"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9"
+                            />
+                        </svg>
+                    </a>
+                    <div>
+                        $${data.price}
+                    </div>
+                </div>
+            </div>
+          `;
+
+              showAlert("Data Berhasil Ditambahkan");
+              container.appendChild(newItem);
+            })
+
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+        });
+
+      const searchInput = document.getElementById("search-navbar");
+      const searchList = document.getElementById("product-container");
+      const productContainer = document.getElementById("product-container");
+      const productTemplate =
+        document.getElementById("product-template").innerHTML;
+
+      function searchInProducts(keyword) {
+        const items = productContainer.getElementsByClassName("max-w-sm");
+
+        for (let i = 0; i < items.length; i++) {
+          const titleElement = items[i].querySelector("h5");
+          const titleText = titleElement.textContent.toLowerCase();
+          const isVisible = titleText.includes(keyword.toLowerCase());
+
+          if (isVisible) {
+            items[i].style.display = "block";
+          } else {
+            items[i].style.display = "none";
+          }
+        }
+      }
+      searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.trim();
+        searchInProducts(searchTerm);
+      });
+
+      function showAlert(message) {
+        const alertElement = document.createElement("div");
+        alertElement.classList.add(
+          "p-4",
+          "mb-4",
+          "text-sm",
+          "text-green-800",
+          "rounded-lg",
+          "bg-green-500",
+          "font-medium",
+          "text-white",
+          "absolute",
+          "bottom-5",
+          "right-5"
+        );
+        alertElement.textContent = message;
+        const container = document.getElementById("container");
+
+        container.appendChild(alertElement);
+
+        setTimeout(() => {
+          alertElement.remove();
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
