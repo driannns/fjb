@@ -400,7 +400,7 @@
           const productContainer = document.getElementById("product-container");
           const productTemplate =
             document.getElementById("product-template").innerHTML;
-          // Loop through each product and fill the template with product data
+
           data.products.forEach((product) => {
             const productCard = productTemplate
               .replace("{{title}}", product.title)
@@ -408,7 +408,6 @@
               .replace("{{price}}", product.price)
               .replace("{{thumbnail}}", product.thumbnail);
 
-            // Append the filled template to the product container
             productContainer.innerHTML += productCard;
           });
         })
